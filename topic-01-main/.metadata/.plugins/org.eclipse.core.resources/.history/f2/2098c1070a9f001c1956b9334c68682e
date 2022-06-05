@@ -1,0 +1,5 @@
+package vn.com.fis.service.impl;
+
+public class StringMaxLengthValidation {
+
+}

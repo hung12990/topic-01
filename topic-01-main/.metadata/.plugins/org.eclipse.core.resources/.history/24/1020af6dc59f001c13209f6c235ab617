@@ -1,0 +1,64 @@
+package vn.com.fis.model;
+
+import vn.com.fis.service.Calculator;
+import vn.com.fis.service.impl.BadLocationCalcu;
+import vn.com.fis.service.impl.GoodLocationCalcu;
+import vn.com.fis.service.impl.HardLocationCalcu;
+import vn.com.fis.service.impl.SpecicalLocationCalcu;
+
+public class Data {
+	private int hp;
+	private int d;
+	private int s;
+	private String t;
+	
+	public Data(int hp, int d, int s, String t) {
+		this.hp = hp;
+		this.d = d;
+		this.s = s;
+		this.t = t;
+		
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
+	public int getD() {
+		return d;
+	}
+
+	public void setD(int d) {
+		this.d = d;
+	}
+
+	public int getS() {
+		return s;
+	}
+
+	public void setS(int s) {
+		this.s = s;
+	}
+
+	public String getT() {
+		return t;
+	}
+
+	public void setT(String t) {
+		this.t = t;
+	}
+	
+	//public method
+	
+	public double predict(Calculator calculator) {
+		double p1 = 0.0, p2 = 0.0, f = 0.0;
+		p1 = calculator.calculatorP()[0];
+		p2 = calculator.calculatorP()[1];
+		f = calculator.calculatorF();
+		return (p1 + p2 * f)/(1000 + Math.abs(p2 * f));
+	}
+}

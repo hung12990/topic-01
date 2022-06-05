@@ -1,0 +1,14 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.Calculator;
+
+public class GoodLocationCalcu extends Calculator{
+
+	@Override
+	public double calculatorF(int d, int s, String t) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+}

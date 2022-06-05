@@ -1,0 +1,32 @@
+package vn.com.fis.service.impl;
+
+import java.text.SimpleDateFormat;
+
+import vn.com.fis.service.IValidation;
+
+public class DateValidation implements IValidation {
+
+	private String format = "dd-mm-yyyy;mm-dd-yyyy";
+
+	@Override
+	public boolean validate(String data) {
+		String[] formats = format.split(";");
+		for (String s : formats) {
+			SimpleDateFormat sdf = new SimpleDateFormat(s);
+			try {
+				sdf.parse(data);
+				return true;
+			} catch (Exception e) {
+				// TODO: handle exception
+				continue;
+			}
+		}
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		String data = "08-30-1994";
+		System.out.println(new DateValidation().validate(data));
+	}
+
+}

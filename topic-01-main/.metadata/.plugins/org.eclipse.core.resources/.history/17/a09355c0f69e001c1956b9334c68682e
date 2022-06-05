@@ -1,0 +1,11 @@
+package vn.com.fis.main;
+
+import vn.com.fis.model.BikeTicket;
+
+public class MainApplication {
+	public static void main(String[] args) {
+		BikeTicket bikeTicket = new BikeTicket(1);
+		
+		System.out.println(bikeTicket.toString());
+	}
+}

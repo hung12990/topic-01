@@ -1,0 +1,83 @@
+package vn.com.fis.model;
+
+import vn.com.fis.service.impl.BadLocationCalcu;
+import vn.com.fis.service.impl.GoodLocationCalcu;
+import vn.com.fis.service.impl.HardLocationCalcu;
+import vn.com.fis.service.impl.SpecicalLocationCalcu;
+
+public class Data {
+	private int hp;
+	private int d;
+	private int s;
+	private String t;
+	
+	public Data() {
+	}
+
+	public Data(int hp, int d, int s, String t) {
+		this.hp = hp;
+		this.d = d;
+		this.s = s;
+		this.t = t;
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
+	public int getD() {
+		return d;
+	}
+
+	public void setD(int d) {
+		this.d = d;
+	}
+
+	public int getS() {
+		return s;
+	}
+
+	public void setS(int s) {
+		this.s = s;
+	}
+
+	public String getT() {
+		return t;
+	}
+
+	public void setT(String t) {
+		this.t = t;
+	}
+	
+	//public method
+	
+	public double predict() {
+		double p1 = 0.0, p2 = 0.0, f = 0.0;
+		if(this.d < 200) {
+			BadLocationCalcu b = new BadLocationCalcu(hp, s, d, t);
+			p1 = b.calculatorP()[0];
+			p2 = b.calculatorP()[1];
+			f = b.calculatorF();
+		}else if(this.d < 300) {
+			SpecicalLocationCalcu spe = new SpecicalLocationCalcu(hp, s, d, t);
+			p1 = spe.calculatorP()[0];
+			p2 = spe.calculatorP()[1];
+			f = spe.calculatorF();
+		}else if(this.d <= 800) {
+			GoodLocationCalcu g = new GoodLocationCalcu(hp, s, d, t);
+			p1 = g.calculatorP()[0];
+			p2 = g.calculatorP()[1];
+			f = g.calculatorF();
+		}else {
+			HardLocationCalcu h = new HardLocationCalcu(hp, s, d, t);
+			p1 = h.calculatorP()[0];
+			p2 = h.calculatorP()[1];
+			f = h.calculatorF();
+		}
+		return (p1 + p2 * f)/(1000 + Math.abs(p2 * f));
+	}
+}

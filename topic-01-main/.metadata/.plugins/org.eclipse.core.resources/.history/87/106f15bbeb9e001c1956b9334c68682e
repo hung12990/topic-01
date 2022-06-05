@@ -1,0 +1,10 @@
+package vn.com.fis.main;
+
+import vn.com.fis.model.VehicleTicket;
+
+public class MainApplication {
+	public static void main(String[] args) {
+		VehicleTicket vehicleTicket = new VehicleTicket(1, 100);
+		System.out.println(vehicleTicket.toString());
+	}
+}

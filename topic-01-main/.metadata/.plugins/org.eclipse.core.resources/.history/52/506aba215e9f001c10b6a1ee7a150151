@@ -1,0 +1,7 @@
+package vn.com.fis.service;
+
+public interface Calculator {
+	public int calculatorP1();
+	public int calculatorP2();
+	public int calculatorF();
+}

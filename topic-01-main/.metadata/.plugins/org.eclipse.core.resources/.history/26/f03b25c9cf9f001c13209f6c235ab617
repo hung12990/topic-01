@@ -1,0 +1,49 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.Calculator;
+import vn.com.fis.util.ValidateUtil;
+
+public class GoodLocationCalcu extends Calculator{
+
+	public GoodLocationCalcu(int hp, int s, int d, String t) {
+		super(hp, s, d, t);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double calculatorF() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	//hàm tính giá trị loại giống
+	public double gs() {
+		int res = this.getS() % 6;
+		switch (res) {
+		case 1: {
+			return this.getS() * 2;
+		}
+		case 2: {
+			return -1.0 * Math.pow((this.getS() % 9), 3)/5;
+		}
+		case 3: {
+			return -1.0 * Math.pow((this.getS() % 30), 2) + 3 * this.getS();
+		}
+		case 4: {
+			return this.getS() * -1.0;
+		}
+		case 5: {
+			//fake data
+			return -1.0 * ValidateUtil.getTriangular((this.getS() % 5) + 5);
+		}
+		default:
+			return this.getS()/2;
+		}
+	}
+
+	
+	//hàm tính năng suất thu hoach
+	public double pt() {
+		return 0;
+	}
+}

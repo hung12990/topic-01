@@ -1,0 +1,37 @@
+package vn.com.fis.domain;
+
+import vn.com.fis.model.Student;
+import vn.com.fis.service.ISortStrategy;
+
+public class StudentList {
+	
+	private Student[] students = new Student[100];
+	private int count;
+	private ISortStrategy iSortStrategy;
+	
+	public void addStudent(Student student) {
+		students[count] = student;
+		count++;
+	}
+	
+	public Student removeStudent(int code) {
+		for(Student s: students) {
+			if(s.getCode() == code) {
+				s = null;
+			}
+		}
+		return null;
+	}
+	
+	public void display() {
+		
+	}
+	
+	public void sort() {
+		
+	}
+	
+	public void setSortStrategy(ISortStrategy iSortStrategy) {
+		this.iSortStrategy = iSortStrategy;
+	}
+}

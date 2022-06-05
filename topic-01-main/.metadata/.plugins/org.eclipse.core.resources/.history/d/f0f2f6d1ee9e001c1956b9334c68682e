@@ -1,0 +1,32 @@
+package vn.com.fis.model;
+
+public class VehicleTicket {
+	
+	private int code;
+
+	private double price;
+		
+	public VehicleTicket(int code, double price) {
+		super();
+		this.code = code;
+		this.price = price;
+	}
+
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
+}

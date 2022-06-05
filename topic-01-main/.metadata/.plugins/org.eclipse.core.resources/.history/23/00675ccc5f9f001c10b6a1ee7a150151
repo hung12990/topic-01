@@ -1,0 +1,13 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.Calculator;
+
+public class SpecicalLocationCalcu extends Calculator{
+
+	@Override
+	public double calculatorF() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,28 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.Calculator;
+
+
+//trường hợp 200 <= d < 300
+public class SpecicalLocationCalcu extends Calculator{
+
+
+	//tính tỉ lệ bị rắn cắn
+	public SpecicalLocationCalcu(int hp, int s, int d, String t) {
+		super(hp, s, d, t);
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	@Override
+	public double calculatorF() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public double snake() {
+		int[] p = this.calculatorP();
+		return (this.getD() + p[0] + p[1])/1000.0;
+	}
+}
+

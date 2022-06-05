@@ -1,0 +1,25 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.Calculator;
+
+public class BadLocationCalcu implements Calculator{
+
+	@Override
+	public int calculatorP1() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int calculatorP2() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double calculatorF() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

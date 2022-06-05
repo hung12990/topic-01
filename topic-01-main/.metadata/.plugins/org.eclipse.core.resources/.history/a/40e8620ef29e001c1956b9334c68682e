@@ -1,0 +1,4 @@
+package vn.com.fis.model;
+
+public class BikeTicket extends VehicleTicket{
+}

@@ -1,0 +1,20 @@
+package vn.com.fis.main;
+
+import vn.com.fis.model.BikeTicket;
+import vn.com.fis.model.MotorTicket;
+import vn.com.fis.service.SummarySheet;
+
+public class MainApplication {
+	public static void main(String[] args) {
+		SummarySheet summarySheet = new SummarySheet();
+		summarySheet.getBikeTickets().add(new BikeTicket(1));
+		summarySheet.getBikeTickets().add(new BikeTicket(2));
+		summarySheet.getMotorTickets().add(new MotorTicket(3, "29L1-30325"));
+		
+		System.out.println(summarySheet.getBikeTickets());
+		
+		System.out.println(summarySheet.getMotorTickets());
+		
+		System.out.println(summarySheet.toString());
+	}
+}

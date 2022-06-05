@@ -1,0 +1,15 @@
+package vn.com.fis.model;
+
+public class MotorTicket extends VehicleTicket{
+	private String number;
+
+	public MotorTicket() {
+	}
+
+	public MotorTicket(String number) {
+		super();
+		this.number = number;
+	}
+	
+	
+}

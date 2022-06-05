@@ -1,0 +1,19 @@
+package vn.com.fis.domain;
+
+import vn.com.fis.model.Data;
+import vn.com.fis.model.Info;
+import vn.com.fis.service.Calculator;
+
+public class MainApplication {
+	public static void main(String[] args) {
+		Info info = new Info(657, 84, 60, "Rain");
+		
+		Calculator calculator = info.getCalculator();
+		
+		System.out.println(calculator.calculatorP()[0] + " : " + calculator.calculatorP()[1]);
+		
+		System.out.println(calculator.calculatorF());
+		
+		System.out.println(new Data(calculator).predict());
+	}
+}

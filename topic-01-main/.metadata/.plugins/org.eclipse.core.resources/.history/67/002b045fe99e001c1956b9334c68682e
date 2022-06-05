@@ -1,0 +1,55 @@
+package vn.com.fis.model;
+
+public class VehicleTicket {
+	//properties
+	private int code;
+	private double price;
+	private double cost = 100;
+	private double tax;
+	
+	//constructor
+	public VehicleTicket() {
+	}
+
+	public VehicleTicket(int code, double price) {
+		this.code = code;
+		this.price = price;
+		this.tax = 0.1 * price;
+	}
+
+	//setter and getter
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	public double getTax() {
+		return tax;
+	}
+
+	public void setTax(double tax) {
+		this.tax = tax;
+	}
+
+	
+	
+}

@@ -1,0 +1,53 @@
+package vn.com.fis.domain;
+
+import java.util.Arrays;
+
+import vn.com.fis.model.Student;
+import vn.com.fis.service.ISortStrategy;
+
+public class StudentList {
+	
+	private Student[] students = new Student[0];
+	private int count;
+	private ISortStrategy iSortStrategy;
+	
+	public void addStudent(Student student) {
+		students = Arrays.copyOf(students, ++count);
+		students[count - 1] = student;
+	}
+	
+	public Student removeStudent(int code) {
+		int flag = -1;
+		for(int i = 0; i < students.length; i++) {
+			if(students[i].getCode() == code) {
+				flag = i;
+			}
+		}
+		if(flag == -1) {
+			return null;
+		}else {
+			Student std = students[flag];
+			Student temp[] = new Student[students.length - 1];
+			for(int i = 0, k = 0; i < students.length; i++) {
+				if(i == flag) {
+					continue;
+				}else {
+					temp[k++] = students[i];
+				}
+			}
+			students = temp;
+			return std;
+		}
+	}
+	
+	public void display() {
+	}
+	
+	public void sort() {
+		iSortStrategy.sort(students, count);
+	}
+	
+	public void setSortStrategy(ISortStrategy iSortStrategy) {
+		this.iSortStrategy = iSortStrategy;
+	}
+}

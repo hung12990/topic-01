@@ -1,0 +1,106 @@
+package vn.com.fis.service;
+
+import java.util.Date;
+import java.util.List;
+
+import vn.com.fis.model.BikeTicket;
+import vn.com.fis.model.MotorTicket;
+
+public class SummarySheet {
+	private static final double TAX_PERCENT = 10;
+	
+	private static final double LABOR_COST = 100;
+	
+	private static final double BIKE_PRICE = 500;
+	
+	private static final double MOTOR_PRICE = 1000;
+	
+	private Date date = new Date();
+	private List<BikeTicket> bikeTickets;
+	private List<MotorTicket> motorTickets;
+	private double amount;
+	private double tax;
+	private double cost;
+	private double interest;
+	
+	public SummarySheet() {
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public List<BikeTicket> getBikeTickets() {
+		return bikeTickets;
+	}
+
+	public void setBikeTickets(List<BikeTicket> bikeTickets) {
+		this.bikeTickets = bikeTickets;
+	}
+
+	public List<MotorTicket> getMotorTickets() {
+		return motorTickets;
+	}
+
+	public void setMotorTickets(List<MotorTicket> motorTickets) {
+		this.motorTickets = motorTickets;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public double getTax() {
+		return tax;
+	}
+
+	public void setTax(double tax) {
+		this.tax = tax;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	public double getInterest() {
+		return interest;
+	}
+
+	public void setInterest(double interest) {
+		this.interest = interest;
+	}
+
+	public static double getTaxPercent() {
+		return TAX_PERCENT;
+	}
+
+	public static double getLaborCost() {
+		return LABOR_COST;
+	}
+	
+	
+	//public method
+	
+	//method to count all vehicle
+	public int count() {
+		return bikeTickets.size() + motorTickets.size();
+	}
+	
+	//method to calculator total amount
+	public double getTotalAmount() {
+		
+	}
+	
+}

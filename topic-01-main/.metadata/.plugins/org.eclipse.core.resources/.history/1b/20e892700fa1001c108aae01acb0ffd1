@@ -1,0 +1,27 @@
+package com.java;
+
+import java.util.Arrays;
+
+public class Test {
+	public static void main(String[] args) {
+		Demo arr[] = new Demo[4];
+		arr[0] = new Demo(3);
+		arr[1] = new Demo(1);
+		arr[2] = new Demo(6);
+		arr[3] = new Demo(2);
+		sort(arr);
+		System.out.println(Arrays.toString(arr));
+	}
+	public static void sort(Demo arr[]) {
+		for(int i = 0; i < arr.length - 1; i++) {
+			for(int j = i + 1; j < arr.length; j++) {
+				if(arr[i].compareTo(arr[j]) > 0) {
+					Demo temp = arr[j];
+					arr[j] = arr[i];
+					arr[i] = temp;
+				}
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,9 @@
+package vn.com.fis.domain;
+
+import vn.com.fis.model.Info;
+
+public class MainApplication {
+	public static void main(String[] args) {
+		Info info = new Info(0, 0, 0, null);
+	}
+}

@@ -1,0 +1,12 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.ISortStrategy;
+
+public class InsertionSortStrategy  implements ISortStrategy{
+
+	@Override
+	public void sort(Comparable[] data, int count) {
+		
+	}
+
+}

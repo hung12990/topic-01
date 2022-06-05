@@ -1,0 +1,18 @@
+package vn.com.fis.service;
+
+import vn.com.fis.util.ValidateUtil;
+
+public abstract class Calculator {
+	public int[] calculatorP(int hp, int s, int d) {
+		int[] p = new int[2];
+		if(ValidateUtil.isPrime(hp)) {
+			p[0] = 1000;
+			p[1] = (hp + s) % 1000;
+		}else {
+			p[0] = hp;
+			p[1] = (hp + d) % 100;
+		}
+		return p;
+	};
+	public abstract double calculatorF(int d, int s, String t);
+}

@@ -1,0 +1,11 @@
+package vn.com.fis.service;
+
+import java.util.Comparator;
+
+public interface ISortStrategy {
+	void sort(Comparable[] data, int count);
+	
+	default void sort(Comparator cmp, int count) {
+		
+	};
+}

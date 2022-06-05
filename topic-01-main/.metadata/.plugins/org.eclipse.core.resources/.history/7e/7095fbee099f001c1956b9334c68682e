@@ -1,0 +1,18 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.IValidation;
+
+public class DecimalValidation implements IValidation{
+
+	@Override
+	public boolean validate(String data) {
+		try {
+			Double.parseDouble(data);
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+	
+}

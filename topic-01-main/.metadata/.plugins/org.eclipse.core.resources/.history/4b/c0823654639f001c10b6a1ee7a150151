@@ -1,0 +1,28 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.Calculator;
+
+public class GoodLocationCalcu extends Calculator{
+
+	public GoodLocationCalcu(int hp, int s, int d, String t) {
+		super(hp, s, d, t);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double calculatorF() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	//hàm tính giá trị loại giống
+	public double gs() {
+		
+	}
+
+	
+	//hàm tính năng suất thu hoach
+	public double pt() {
+		
+	}
+}

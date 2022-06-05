@@ -1,0 +1,80 @@
+package vn.com.fis.service;
+
+import java.util.Date;
+import java.util.List;
+
+import vn.com.fis.model.BikeTicket;
+import vn.com.fis.model.MotorTicket;
+
+public class SummarySheet {
+	private static final double TAX_PERCENT = 10;
+	
+	private static final double LABOR_COST = 100;
+	
+	private static final double BIKE_PRICE = 500;
+	
+	private static final double MOTOR_PRICE = 1000;
+	
+	private Date date = new Date();
+	private List<BikeTicket> bikeTickets;
+	private List<MotorTicket> motorTickets;
+	
+	public SummarySheet() {
+	}
+
+	//public method
+	
+	public Date getDate() {
+		return date;
+	}
+
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+
+	public List<BikeTicket> getBikeTickets() {
+		return bikeTickets;
+	}
+
+
+	public void setBikeTickets(List<BikeTicket> bikeTickets) {
+		this.bikeTickets = bikeTickets;
+	}
+
+
+	public List<MotorTicket> getMotorTickets() {
+		return motorTickets;
+	}
+
+
+	public void setMotorTickets(List<MotorTicket> motorTickets) {
+		this.motorTickets = motorTickets;
+	}
+
+
+	//method to get total amount
+	public double getAmount() {
+		return bikeTickets.size() * BIKE_PRICE + motorTickets.size() * MOTOR_PRICE;
+	}
+	
+	//method to calculator interest
+
+	public double getInterest() {
+		double tax = getAmount() * TAX_PERCENT;
+		double cost = count() * LABOR_COST;
+		return getAmount() - (tax + cost);
+	}
+
+	//method to count all vehicle
+	public int count() {
+		return bikeTickets.size() + motorTickets.size();
+	}
+
+	@Override
+	public String toString() {
+		return "SummarySheet [date=" + date + ", amount=" + getAmount() + ", interest=" + getInterest() + "]";
+	}
+	
+}

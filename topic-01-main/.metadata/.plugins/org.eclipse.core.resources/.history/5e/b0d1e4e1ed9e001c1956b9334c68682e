@@ -1,0 +1,18 @@
+package vn.com.fis.model;
+
+public abstract class VehicleTicket {
+	//properties
+	private int code;
+	private double price;
+	
+	//constructor
+	
+	public VehicleTicket(int code) {
+		this.code = code;
+	}
+
+	public VehicleTicket() {
+		super();
+	}
+	
+}

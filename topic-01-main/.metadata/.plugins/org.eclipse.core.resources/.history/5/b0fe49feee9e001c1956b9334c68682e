@@ -1,0 +1,10 @@
+package vn.com.fis.model;
+
+public class BikeTicket extends VehicleTicket{
+	private double price;
+	
+	public BikeTicket(int code) {
+		super(code);
+		this.price = 100;
+	}	
+}

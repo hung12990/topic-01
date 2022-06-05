@@ -1,0 +1,18 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.Calculator;
+import vn.com.fis.util.ValidateUtil;
+
+
+//trường hợp d < 200
+public class BadLocationCalcu extends Calculator{
+
+	@Override
+	public double calculatorF(int d, int s, String t) {
+		if(!ValidateUtil.isFibonacci(d + s)) {
+			return 0;
+		}
+		return new GoodLocationCalcu().calculatorF(d, s, t);
+	}
+
+}

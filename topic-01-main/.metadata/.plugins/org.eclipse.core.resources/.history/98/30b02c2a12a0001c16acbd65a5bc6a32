@@ -1,0 +1,21 @@
+package vn.com.fis.service;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+
+import vn.com.fis.model.Student;
+
+public interface ISortStrategy {
+	void sort(Comparable[] data, int count);
+	
+	default void sort(Student[] students, Comparator<Student> cmp, int count) {
+		if(count > students.length) {
+			count = students.length;
+		}else if(count < students.length) {
+			students = Arrays.copyOf(students, count);
+		}
+		
+		Collections.sort(Arrays.asList(students), cmp);
+	};
+}

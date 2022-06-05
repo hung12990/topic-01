@@ -1,0 +1,12 @@
+package vn.com.fis.domain;
+
+public enum Price {
+	BIKE_PRICE(500),
+	MOTOR_PRICE(1000);
+	
+	private int price;
+	
+	private Price(int price) {
+		this.price = price;
+	}
+}

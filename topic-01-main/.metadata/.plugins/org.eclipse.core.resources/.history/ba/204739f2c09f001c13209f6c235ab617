@@ -1,0 +1,23 @@
+package vn.com.fis.domain;
+
+import java.util.Date;
+
+import vn.com.fis.model.Student;
+import vn.com.fis.service.impl.BubbleSortStrategy;
+import vn.com.fis.service.impl.InsertionSortStrategy;
+import vn.com.fis.service.impl.SelectionSortStrategy;
+
+public class demo {
+	public static void main(String[] args) {
+		StudentList studentList = new StudentList();
+		studentList.addStudent(new Student(1, "Tann", new Date()));
+		studentList.addStudent(new Student(5, "Minh", new Date()));
+		studentList.addStudent(new Student(3, "Dai", new Date()));
+		studentList.addStudent(new Student(4, "Tuan", new Date()));
+		studentList.addStudent(new Student(2, "Ngoc", new Date()));
+		studentList.removeStudent(3);
+		studentList.setSortStrategy(new SelectionSortStrategy());
+		studentList.sort();
+		studentList.display();
+	}
+}

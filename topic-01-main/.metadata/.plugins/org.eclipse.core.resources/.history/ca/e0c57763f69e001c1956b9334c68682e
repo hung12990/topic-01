@@ -1,0 +1,48 @@
+package vn.com.fis.util;
+
+import java.util.Scanner;
+
+public class MainUtil {
+	public static Scanner sc;
+
+	static {
+		sc = new Scanner(System.in);
+	}
+
+	public static void display() {
+		do {
+			System.out.println("+-----------------Quản lý------------------+");
+			System.out.println("| 1. Gửi xe đạp.                           |");
+			System.out.println("| 2. Gửi xe máy.                           |");
+			System.out.println("| 3. Phiếu tổng kết.                       |");
+			System.out.println("| 4. Thoát màn hình.                       |");
+			System.out.println("+------------------------------------------+");
+			System.out.print("Chọn chức năng: ");
+			try {
+				int choose = Integer.parseInt(sc.nextLine());
+				switch (choose) {
+				case 1: {
+
+					break;
+				}
+				case 2: {
+
+					break;
+				}
+				case 3: {
+
+					break;
+				}
+				case 4: {
+
+					break;
+				}
+				default:
+					System.out.println("Không có chức năng này!");
+				}
+			} catch (Exception e) {
+				System.out.println("Không có chức năng này!");
+			}
+		} while (true);
+	}
+}

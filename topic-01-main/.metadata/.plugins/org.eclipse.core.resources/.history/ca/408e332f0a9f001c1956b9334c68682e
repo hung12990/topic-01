@@ -1,0 +1,15 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.IValidation;
+
+public class StringMaxLengthValidation implements IValidation{
+	
+	private int length;
+
+	@Override
+	public boolean validate(String data) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

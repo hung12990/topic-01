@@ -1,0 +1,12 @@
+package vn.com.fis.domain;
+
+import vn.com.fis.model.Data;
+import vn.com.fis.model.Info;
+
+public class MainApplication {
+	public static void main(String[] args) {
+		Info info = new Info(600, 144, 100, "Rain");
+		
+		System.out.println(new Data(info.getCalculator()).predict());
+	}
+}

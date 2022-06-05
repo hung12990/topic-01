@@ -1,0 +1,15 @@
+package vn.com.fis.service.impl;
+
+import vn.com.fis.service.Calculator;
+
+
+//trường hợp d < 200
+public class BadLocationCalcu extends Calculator{
+
+	@Override
+	public double calculatorF(int d, int s, String t) {
+		
+		return 0;
+	}
+
+}
